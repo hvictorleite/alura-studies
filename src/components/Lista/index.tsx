@@ -8,7 +8,8 @@ function Lista( { tarefas }: { tarefas: ITarefa[] } ) {
             <h2>Estudos do dia</h2>
             <ul>
                 {tarefas.map((item, index) => (
-                    <Item key={index} tarefa={item.tarefa} tempo={item.tempo} />
+                    <Item key={index} tarefa={item.tarefa} tempo={item.tempo} 
+                    selecionado={item.selecionado} completado={item.completado} id={item.id} />
                     // OU
                     // <Item key={index} { ...item } />
                     // Para pegar todas as informações de item e enviar para Item
